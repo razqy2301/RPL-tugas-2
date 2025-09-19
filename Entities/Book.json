@@ -1,0 +1,64 @@
+{
+  "name": "Book",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Judul buku"
+    },
+    "author": {
+      "type": "string",
+      "description": "Nama pengarang"
+    },
+    "genre": {
+      "type": "string",
+      "enum": [
+        "Fiksi",
+        "Non-Fiksi",
+        "Romance",
+        "Mystery",
+        "Sci-Fi",
+        "Fantasy",
+        "Biography",
+        "History",
+        "Self-Help",
+        "Horror",
+        "Thriller",
+        "Comedy"
+      ],
+      "description": "Genre buku"
+    },
+    "cover_url": {
+      "type": "string",
+      "description": "URL gambar cover buku"
+    },
+    "rating": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 5,
+      "description": "Rating buku (1-5)"
+    },
+    "year_published": {
+      "type": "integer",
+      "description": "Tahun terbit"
+    },
+    "description": {
+      "type": "string",
+      "description": "Deskripsi singkat buku"
+    },
+    "is_trending": {
+      "type": "boolean",
+      "default": false,
+      "description": "Apakah buku sedang trending"
+    },
+    "pages": {
+      "type": "integer",
+      "description": "Jumlah halaman"
+    }
+  },
+  "required": [
+    "title",
+    "author",
+    "genre"
+  ]
+}
